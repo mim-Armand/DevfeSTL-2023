@@ -1,5 +1,16 @@
 import React from "react";
-import {AppBar, Box, Button, IconButton, Slide, Toolbar, Typography, useScrollTrigger} from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  Slide,
+  Toolbar,
+  Typography,
+  useScrollTrigger
+} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import DevFeSTLPeriodic from "./DevFeSTLPeriodic";
 
@@ -14,6 +25,15 @@ function HideOnScroll(props) {
 }
 
 const Navbar = (props) => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    console.log('the click functionality yet needs to be done..')
+    setAnchorEl(null);
+  };
   return (<Box sx={{flexGrow: 1}}>
     <HideOnScroll {...props}>
       <AppBar>
@@ -23,9 +43,26 @@ const Navbar = (props) => {
             edge='start'
             aria-label='menu'
             sx={{mr: 2}}
+            onClick={handleClick}
+            aria-controls={open ? 'basic-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
           >
             <MenuIcon/>
           </IconButton>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              'aria-labelledby': 'basic-button',
+            }}
+          >
+            <MenuItem onClick={handleClose}>Register</MenuItem>
+            <MenuItem onClick={handleClose}>Speakers</MenuItem>
+            <MenuItem onClick={handleClose}>Agenda</MenuItem>
+          </Menu>
           <DevFeSTLPeriodic number="12" text="Dev" title='Develop'/>
           <DevFeSTLPeriodic number="09" text="Fe" title='Strong'/>
           <DevFeSTLPeriodic number="2023" text="STL" title='St. Louis'/>
