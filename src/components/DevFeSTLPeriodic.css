@@ -1,0 +1,23 @@
+.periodicElementBox{
+    border: 1px solid;
+    width: 3em;
+    height: 3em;
+    margin: 9px;
+}
+
+.periodicElementBox h5 {
+    font-weight: 800;
+    font-family: "Arial Black", serif;
+    margin: auto;
+}
+.periodicElementBox h5 span{
+    font-weight: 400;
+    font-family: "Arial", serif;
+    font-size: .81em;
+}
+
+.periodicElementBox small{
+    font-size: .6em;
+    margin: 3px;
+    margin-bottom: 0;
+}
