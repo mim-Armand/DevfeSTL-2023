@@ -1,0 +1,16 @@
+.devfestHeaderImg{
+}
+.devfestHeaderImgTxt{
+    font-size: 6em;
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: floralwhite;
+    color: black;
+    font-family: system-ui;
+    font-weight: 800;
+    top: -1.5em;
+    position: relative;
+    margin-bottom: -150px;
+}
+.joinCardsContainer > div{
+    padding: 10px;
+}
