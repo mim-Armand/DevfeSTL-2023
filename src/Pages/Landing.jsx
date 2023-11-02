@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Badge,
   Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Stack, Typography
 } from "@mui/material";
 import {styled} from '@mui/material/styles';
@@ -25,21 +26,30 @@ const Item = styled(Paper)(({theme}) => ({
 
 
 function SponsorPckg(props) {
-  const {image, title, text, icon} = props;
+  const {image, title, text, icon, limit} = props;
   return <Card
     className='spondorCards'
     display="flex"
+    variant='outlined'
+    onClick={()=>{
+      window.open('https://forms.gle/VcH1gSdFk9caaU3c9', '_blank', 'noopener,noreferrer');
+    }}
   >
     <CardActionArea>
       <CardMedia
         component="img"
-        height="180"
+        height="99"
         image={image}
         alt={`Sponsor DevFest with ${title}`}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {icon} {title}
+          <Badge
+            className="pckgsIcon"
+            badgeContent={limit}
+            title='limit'
+            color='secondary'
+          >{icon}</Badge> {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {text}
@@ -125,24 +135,28 @@ const Landing = () => {
                 <Grid display="flex" className='sponsorCardsContainer'>
 
                   <SponsorPckg
+                    limit={3}
                     image={pckgPlat}
                     title='Platinum package.'
-                    text='Limited only to two sponsors. This is the best package we have!'
-                    icon={<EmojiEventsTwoTone className="pckgsIcon" fontSize="large" style={{color: 'cornflowerblue'}}/>}
+                    text='The premium level of sponsorship with maximum exposure and benefits tailored for industry leaders.'
+                    icon={<EmojiEventsTwoTone fontSize="large" style={{color: 'cornflowerblue'}}/>}
                   />
                   <SponsorPckg
+                    limit={5}
                     image={pckgGold}
                     title='Gold package.'
                     text='Limited only to five sponsors. This is the 2nd best package we have!'
                     icon={<EmojiEventsTwoTone className='pckgsIcon' fontSize="large" style={{color: 'gold'}}/>}
                   />
                   <SponsorPckg
+                    limit={12}
                     image={pckgSilv}
                     title='Silver package.'
                     text='This is our budget friendly package for those who just want to help our community.'
                     icon={<EmojiEventsTwoTone className='pckgsIcon' fontSize="large" style={{color: 'silver'}}/>}
                   />
                   <SponsorPckg
+                    limit={15}
                     image={pckgFree}
                     title='Start-ups package.'
                     text="Be featured for free, you can still help in anyway you'd like!"
