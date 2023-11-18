@@ -96,7 +96,9 @@ const Landing = () => {
               </Card>
             </Grid>
             <Grid>
-              <Card>
+              <Card onClick={()=>{
+                window.open('https://www.papercall.io/devfestl', '_blank', 'noopener,noreferrer');
+              }}>
                 <CardMedia
                   sx={{height: 140}}
                   image={callToSpeak}

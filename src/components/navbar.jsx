@@ -31,7 +31,7 @@ const Navbar = (props) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
-    console.log('the click functionality yet needs to be done..')
+    window.open('https://gdg.community.dev/gdg-st-louis/', '_blank', 'noopener,noreferrer');
     setAnchorEl(null);
   };
   return (<Box sx={{flexGrow: 1}}>
