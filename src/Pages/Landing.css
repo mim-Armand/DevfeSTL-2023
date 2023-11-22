@@ -11,9 +11,17 @@
     position: relative;
     margin-bottom: -150px;
 }
-.joinCardsContainer > div{
-    padding: 10px;
+.devfestHeaderImgTxt2{
+    font-size: 1em;
 }
+.devfestHeaderImgDate{
+    color: red;
+    font-size: 3em;
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: darkred;
+    text-shadow: black 0px 0px 15px;
+}
+
 .pckgsIcon{
     margin-right: 9px;
     margin-top: -6px;

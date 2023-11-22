@@ -1,12 +1,14 @@
 import React from "react";
 import {
-  Badge,
-  Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Stack, Typography
+  Badge, BottomNavigation, BottomNavigationAction,
+  Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Link, Stack, Typography
 } from "@mui/material";
 import {styled} from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import devFestImg from '../img/devfest_img_01.jpg';
 import devFestImgBg from '../img/devfest_img_bg_01.jpg';
+import atendeeBadge from '../img/DF23-DevBadge-Participant.png'
+import speakerBadge from '../img/DF23-DevBadge-Speaker.png'
 import callToSpeak from '../img/callToSpeak.jpg';
 import callToAttend from '../img/callToAttend.jpg';
 import pckgFree from '../img/pckgFree.jpg';
@@ -14,7 +16,7 @@ import pckgPlat from '../img/pckgPlat.jpg';
 import pckgGold from '../img/pckgGold.jpg';
 import pckgSilv from '../img/pckgSilv.jpg';
 import './Landing.css';
-import {EmojiEventsTwoTone, MilitaryTechTwoTone} from "@mui/icons-material";
+import {Diversity3, EmojiEventsTwoTone, LinkedIn, LocalActivity, MilitaryTechTwoTone} from "@mui/icons-material";
 
 
 const Item = styled(Paper)(({theme}) => ({
@@ -32,7 +34,8 @@ function SponsorPckg(props) {
     display="flex"
     variant='outlined'
     onClick={()=>{
-      window.open('https://forms.gle/VcH1gSdFk9caaU3c9', '_blank', 'noopener,noreferrer');
+      openUrl('https://forms.gle/VcH1gSdFk9caaU3c9');
+
     }}
   >
     <CardActionArea>
@@ -59,7 +62,15 @@ function SponsorPckg(props) {
   </Card>;
 }
 
+const openUserDevprofile = () => {
+  openUrl('https://developers.google.com/profile/u/')
+}
+const openUrl = (url='https://gdg.community.dev/gdg-st-louis/', target='_blank') => {
+  window.open(url, target, 'noopener,noreferrer');
+}
+
 const Landing = () => {
+  let videoId = 'tHGA_DNDHUE';
   return (<div>
       <br/>
       <br/>
@@ -70,10 +81,16 @@ const Landing = () => {
             <img src={devFestImg} alt=""/>
           </div>
           <h1 className='devfestHeaderImgTxt'>Join us!</h1>
-          <Grid className='joinCardsContainer' container>
+          <h2 className='devfestHeaderImgTxt2'>Get and a badge to share on your resume!</h2>
+          <h2 className='devfestHeaderImgDate'>12 . 09 . 2023</h2>
+          <Grid
+                container justifyContent="space-evenly"
+                direction="row"
+                alignItems="stretch"
+          >
             <Grid>
               <Card onClick={() => {
-                window.open('https://gdg.community.dev/gdg-st-louis/', '_blank', 'noopener,noreferrer');
+                openUrl('https://gdg.community.dev/gdg-st-louis/');
               }}>
                 <CardMedia
                   sx={{height: 140}}
@@ -84,10 +101,22 @@ const Landing = () => {
                   <Typography gutterBottom variant="h5" component="div">
                     Join as an attendee
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Join us to get to know your local community, network and learn about the latest and greatest
-                    technologies directly from your peers.
-                  </Typography>
+
+
+                      <img src={atendeeBadge} width='150px'
+                           onClick={openUserDevprofile}
+                      />
+
+
+                      <Typography variant="body2" color="text.secondary" align='left'>
+                        <ul>
+                          <li>Join us to get to know your local community, network and learn about the latest and greatest
+                            technologies directly from your peers.</li>
+                          <li>Get an <Link onClick={openUserDevprofile}>official paticipation badge</Link> from Google and add it to your collection.</li>
+                        </ul>
+                      </Typography>
+
+
                 </CardContent>
                 <CardActions>
                   <Button size="small">Join!</Button>
@@ -97,7 +126,7 @@ const Landing = () => {
             </Grid>
             <Grid>
               <Card onClick={()=>{
-                window.open('https://www.papercall.io/devfestl', '_blank', 'noopener,noreferrer');
+                openUrl('https://gdg.community.dev/gdg-st-louis/')
               }}>
                 <CardMedia
                   sx={{height: 140}}
@@ -108,9 +137,15 @@ const Landing = () => {
                   <Typography gutterBottom variant="h5" component="div">
                     Join as a speaker!
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Join as a speaker, share your expertise with your community and expand your network of the local
-                    experts!
+                  <img src={speakerBadge} width='150px'
+                       onClick={openUserDevprofile}
+                  />
+                  <Typography variant="body2" color="text.secondary"  align='left'>
+                    <ul>
+                      <li>Join as a speaker, share your expertise with your community and expand your network of the local
+                        experts!</li>
+                      <li>Get an <Link onClick={openUserDevprofile}>official Speaker badge</Link> from Google and add it to your resume.</li>
+                    </ul>
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -171,6 +206,39 @@ const Landing = () => {
             </CardActions>
           </Card>
 
+        </Item>
+
+        <Item>
+          <iframe
+            // id="ytplayer"
+            // className=''
+            // type="text/html"
+            width="100%"
+            height="360"
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=0&origin=http://devfestl.com&controls=0&rel=1`}
+            frameBorder="0"
+          ></iframe>
+          Event will also be livestreamed
+        </Item>
+
+        <Item>
+          <BottomNavigation>
+            <BottomNavigationAction
+            label='LinkedIn'
+            icon={<LinkedIn />}
+            onClick={ ()=>openUrl('https://www.linkedin.com/groups/14350032/')}
+            />
+            <BottomNavigationAction
+              label='Join us'
+              icon={<Diversity3 />}
+              onClick={ ()=>openUrl('https://gdg.community.dev/gdg-st-louis/')}
+            />
+            <BottomNavigationAction
+              label='Event Page'
+              icon={<LocalActivity />}
+              onClick={ ()=>openUrl('https://gdg.community.dev/events/details/google-gdg-st-louis-presents-devfest-2023-st-louis/')}
+            />
+          </BottomNavigation>
         </Item>
 
       </Stack>

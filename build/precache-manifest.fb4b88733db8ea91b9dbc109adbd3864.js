@@ -1,27 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cc2c1daa35df5a5bd0f4fa39fe965526",
+    "revision": "c469f3014b7543f155bd6c265a92c626",
     "url": "/index.html"
   },
   {
-    "revision": "34858724e771bbf65082",
+    "revision": "6334268c483d20abeb40",
     "url": "/static/css/2.1ff88a8f.chunk.css"
   },
   {
-    "revision": "05ee1bc1caa1f870fc9b",
-    "url": "/static/css/main.0e721dcf.chunk.css"
+    "revision": "eedc113cbec358709d00",
+    "url": "/static/css/main.ae815fcf.chunk.css"
   },
   {
-    "revision": "34858724e771bbf65082",
-    "url": "/static/js/2.b5108a9a.chunk.js"
+    "revision": "6334268c483d20abeb40",
+    "url": "/static/js/2.ecdbbcf1.chunk.js"
   },
   {
-    "revision": "05ee1bc1caa1f870fc9b",
-    "url": "/static/js/main.305424ca.chunk.js"
+    "revision": "eedc113cbec358709d00",
+    "url": "/static/js/main.7ca36b71.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
+  },
+  {
+    "revision": "a2eb1cd89afde863bee8013166b5147c",
+    "url": "/static/media/DF23-DevBadge-Participant.a2eb1cd8.png"
+  },
+  {
+    "revision": "6fb04c6652dda8d00e11c5fafa9145c5",
+    "url": "/static/media/DF23-DevBadge-Speaker.6fb04c66.png"
   },
   {
     "revision": "39bbfda8f3b1e6742c19ea8ee32a33c2",
