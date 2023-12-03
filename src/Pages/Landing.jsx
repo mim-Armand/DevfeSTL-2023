@@ -17,6 +17,7 @@ import pckgGold from '../img/pckgGold.jpg';
 import pckgSilv from '../img/pckgSilv.jpg';
 import './Landing.css';
 import {Diversity3, EmojiEventsTwoTone, LinkedIn, LocalActivity, MilitaryTechTwoTone} from "@mui/icons-material";
+import MapContainer from "../components/MapContainer";
 
 
 const Item = styled(Paper)(({theme}) => ({
@@ -81,7 +82,7 @@ const Landing = () => {
             <img src={devFestImg} alt=""/>
           </div>
           <h1 className='devfestHeaderImgTxt'>Join us!</h1>
-          <h2 className='devfestHeaderImgTxt2'>Get and a badge to share on your resume!</h2>
+          <h2 className='devfestHeaderImgTxt2'>Get a badge to share on your resume!</h2>
           <h2 className='devfestHeaderImgDate'>12 . 09 . 2023</h2>
           <Grid
                 container justifyContent="space-evenly"
@@ -112,7 +113,7 @@ const Landing = () => {
                         <ul>
                           <li>Join us to get to know your local community, network and learn about the latest and greatest
                             technologies directly from your peers.</li>
-                          <li>Get an <Link onClick={openUserDevprofile}>official paticipation badge</Link> from Google and add it to your collection.</li>
+                          <li>Get an <Link onClick={openUserDevprofile}>official participation badge</Link> from Google and add it to your collection.</li>
                         </ul>
                       </Typography>
 
@@ -126,7 +127,7 @@ const Landing = () => {
             </Grid>
             <Grid>
               <Card onClick={()=>{
-                openUrl('https://gdg.community.dev/gdg-st-louis/')
+                openUrl('https://www.papercall.io/devfestl')
               }}>
                 <CardMedia
                   sx={{height: 140}}
@@ -156,6 +157,10 @@ const Landing = () => {
             </Grid>
 
           </Grid>
+        </Item>
+        <Item className='map-container-element'>
+          <h2>Location: <a className='location-link' href="https://maps.app.goo.gl/5P4wbg8hHgn8M99t7" target="_blank"> SLU Center For Global Citizenship.</a></h2>
+          <MapContainer />
         </Item>
         <Item>
           <Card>

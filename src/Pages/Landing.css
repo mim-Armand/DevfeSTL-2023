@@ -15,10 +15,10 @@
     font-size: 1em;
 }
 .devfestHeaderImgDate{
-    color: red;
+    color: cyan;
     font-size: 3em;
     -webkit-text-stroke-width: thin;
-    -webkit-text-stroke-color: darkred;
+    -webkit-text-stroke-color: blue;
     text-shadow: black 0px 0px 15px;
 }
 
@@ -31,4 +31,8 @@
 }
 .sponsorCardsContainer{
     margin: 30px;
+}
+.location-link{
+    color: white;
+    text-decoration: solid;
 }
