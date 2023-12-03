@@ -16,7 +16,7 @@ import pckgPlat from '../img/pckgPlat.jpg';
 import pckgGold from '../img/pckgGold.jpg';
 import pckgSilv from '../img/pckgSilv.jpg';
 import './Landing.css';
-import {Diversity3, EmojiEventsTwoTone, LinkedIn, LocalActivity, MilitaryTechTwoTone} from "@mui/icons-material";
+import {Code, Diversity3, EmojiEventsTwoTone, LinkedIn, LocalActivity, MilitaryTechTwoTone} from "@mui/icons-material";
 import MapContainer from "../components/MapContainer";
 
 
@@ -242,6 +242,11 @@ const Landing = () => {
               label='Event Page'
               icon={<LocalActivity />}
               onClick={ ()=>openUrl('https://gdg.community.dev/events/details/google-gdg-st-louis-presents-devfest-2023-st-louis/')}
+            />
+            <BottomNavigationAction
+              label='By mim Armand'
+              icon={<Code />}
+              onClick={ ()=>openUrl('https://github.com/mim-Armand/DevfeSTL-2023')}
             />
           </BottomNavigation>
         </Item>
