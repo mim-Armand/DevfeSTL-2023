@@ -1,0 +1,38 @@
+.devfestHeaderImg{
+}
+.devfestHeaderImgTxt{
+    font-size: 6em;
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: floralwhite;
+    color: black;
+    font-family: system-ui;
+    font-weight: 800;
+    top: -1.5em;
+    position: relative;
+    margin-bottom: -150px;
+}
+.devfestHeaderImgTxt2{
+    font-size: 1em;
+}
+.devfestHeaderImgDate{
+    color: cyan;
+    font-size: 3em;
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: blue;
+    text-shadow: black 0px 0px 15px;
+}
+
+.pckgsIcon{
+    margin-right: 9px;
+    margin-top: -6px;
+}
+.spondorCards{
+    margin-left: 12px;
+}
+.sponsorCardsContainer{
+    margin: 30px;
+}
+.location-link{
+    color: white;
+    text-decoration: solid;
+}
