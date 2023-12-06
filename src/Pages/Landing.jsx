@@ -91,7 +91,7 @@ const Landing = () => {
           >
             <Grid>
               <Card onClick={() => {
-                openUrl('https://gdg.community.dev/gdg-st-louis/');
+                openUrl('https://gdg.community.dev/events/details/google-gdg-st-louis-presents-devfest-2023-st-louis/');
               }}>
                 <CardMedia
                   sx={{height: 140}}
@@ -105,7 +105,9 @@ const Landing = () => {
 
 
                       <img src={atendeeBadge} width='150px'
-                           onClick={openUserDevprofile}
+                           onClick={() => {
+                             openUrl('https://gdg.community.dev/events/details/google-gdg-st-louis-presents-devfest-2023-st-louis/');
+                           }}
                       />
 
 
