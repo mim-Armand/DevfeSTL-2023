@@ -61,10 +61,7 @@ const Navbar = (props) => {
           >
             <MenuItem onClick={handleClose}>Register</MenuItem>
             <MenuItem onClick={handleClose}>Speakers</MenuItem>
-            <MenuItem onClick={() => {
-              window.open('#agenda-paper', 'self', 'noopener,noreferrer');
-              setAnchorEl(null);
-            }}>Agenda</MenuItem>
+            <MenuItem onClick={handleClose}>Agenda</MenuItem>
           </Menu>
           <DevFeSTLPeriodic number="12" text="Dev" title='Develop'/>
           <DevFeSTLPeriodic number="09" text="Fe" title='Strong'/>
